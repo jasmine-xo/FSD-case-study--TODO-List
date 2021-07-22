@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body background="https://i.pinimg.com/originals/64/e7/50/64e7505fd0dff83971cc6b2f03b479b5.jpg" class="signup">
+    <div class="col-lg-3 loginmargin">
+  
+  
+      <center><h4>User Login</h4></center>
+      
+        <form action="main.html" onsubmit="return validate()">
+          <div class="form-group">
+              <label for="inputEmail">Username</label>
+              <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+              <label id="lemail" style="color:red;visibility:hidden">Invalid</label>
+          </div>
+          <div class="form-group">
+              <label for="inputPassword">Password</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+              <label id="lpwd" style="color:red;visibility:hidden">Invalid</label>
+          </div>
+         
+          <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+      <script>
+        function validate()
+        {  
+            var email=document.getElementById("inputEmail").value;
+            let pwd=document.getElementById("inputPassword").value;
+            // // var ph=document.getElementById("ph").value;
+            // var regpwd=/^([a-zA-Z0-9]{8,20})$/;
+            var regpwd=/^12345$/;
+            var regexp= /^admin$/;
+              
+            if(email=="" || pwd=="")
+            {
+                document.getElementById("lemail").innerHTML="Invalid";
+                document.getElementById("lemail").style.visibility="visible";
+                document.getElementById("lemail").style.color="red";
+                document.getElementById("lpwd").innerHTML="Invalid";
+                document.getElementById("lpwd").style.visibility="visible";
+                document.getElementById("lpwd").style.color="red";
+            }
+                
+                
+            if(!regexp.test(email)){
+                document.getElementById("lemail").innerHTML="Invalid";
+                document.getElementById("lemail").style.visibility="visible";
+                document.getElementById("lemail").style.color="red";
+                return false;
+                            
+                }
+            if(regexp.test(email))
+            {
+              document.getElementById("lemail").innerHTML="valid";
+              document.getElementById("lemail").style.visibility="visible";
+              document.getElementById("lemail").style.color="green";
+                }
+          
+
+            if(!regpwd.test(pwd)) {
+              document.getElementById("lpwd").innerHTML="Invalid";
+              document.getElementById("lpwd").style.visibility="visible";
+              document.getElementById("lpwd").style.color="red";
+              return false;
+            }
+            if(regpwd.test(pwd)) {
+              document.getElementById("lpwd").innerHTML="valid";
+              document.getElementById("lpwd").style.visibility="visible";
+              document.getElementById("lpwd").style.color="green";
+              
+            }
+            
+           
+
+           
+           if(regexp.test(email) || regpwd.test(pwd))
+              {
+
+                return true;
+              }  
+            
+        }
+        </script>
+</body>
+
+    
+</body>
+</html>

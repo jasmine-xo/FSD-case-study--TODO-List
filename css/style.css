@@ -1,0 +1,62 @@
+#user{
+    position: absolute;
+    margin-top: 17%;
+    margin-left:45%;
+    
+}
+#pass{
+    position: absolute;
+    margin-top: 23%;
+    margin-left:45%;
+    
+}
+#si{
+    position: absolute;
+    margin-top: 29%;
+    margin-left:49%;
+
+}
+.loginmargin{
+    position: absolute;
+    margin-top: 18%;
+    margin-left: 35%;
+
+}
+.signup{
+    background-size: cover;
+}
+.dem{
+    position: absolute;
+   
+    margin-left: 5%;
+
+}
+.but{
+    border-radius: 10%;
+    background-color:SlateBlue;
+    
+}
+.but1{
+    background-color: SlateBlue;
+    border-radius:10%;
+}
+/* input {
+    width: 2.5%;
+    
+ 
+  } */
+.checkmark{
+    height: 70px;
+    width: 70px;
+    padding-left: 10px;
+    width: 70px;
+    padding-right: 10px;
+    font-size: 20px;
+    
+
+    background-color: #f3f3f3;
+    border: solid rgb(147, 104, 218);
+    border-width: 1 px;
+}
+
+  
